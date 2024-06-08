@@ -1,0 +1,10 @@
+services:
+  webserver:
+    image: php:apache
+    ports:
+      - 80:80
+    volumes:
+      - /vagrant/website/:/var/www/html/
+    deploy:
+      mode: replicated
+      replicas: 2
